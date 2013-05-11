@@ -4,8 +4,8 @@
 To study openflow with Trema by myself.
 
 ** References
-[[http://yasuhito.github.io/trema-book/][OpenFlow実践入門]]
-[[http://www.amazon.co.jp/dp/4774154652/ref%3Dcm_sw_r_tw_dp_0SlTqb1NGYDN9][クラウド時代のネットワーク技術 OpenFlow実践入門 (Software Design plus)]]
+- [[http://yasuhito.github.io/trema-book/][OpenFlow実践入門]]
+- [[http://www.amazon.co.jp/dp/4774154652/ref%3Dcm_sw_r_tw_dp_0SlTqb1NGYDN9][クラウド時代のネットワーク技術 OpenFlow実践入門 (Software Design plus)]]
 
 
 
