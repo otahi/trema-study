@@ -12,4 +12,15 @@ class Counter
   def each_pair( &block )
     @db.each_pair &block
   end
+
+  def get_packet_count( mac )
+    @db[ mac ] ||= { :packet_count => 0 }
+    @db[ mac ][ :packet_count ]
+  end
+
+  def get_packet_size( mac )
+    @db[ mac ] ||= { :byte_count => 0 }
+    @db[ mac ][ :byte_count ]
+  end
+
 end

@@ -25,11 +25,11 @@ class TrafficMonitor < Controller
   end
 
   def get_packet_count( mac )
-    return 10
+    @counter.get_packet_count Mac.new( mac )
   end
 
   def get_packet_size( mac )
-    return 100
+    @counter.get_packet_size Mac.new( mac )
   end
 
   private
