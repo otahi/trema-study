@@ -24,6 +24,14 @@ class TrafficMonitor < Controller
     @counter.add message.match.dl_src, message.packet_count, message.byte_count
   end
 
+  def get_packet_count( mac )
+    return 10
+  end
+
+  def get_packet_size( mac )
+    return 100
+  end
+
   private
 
   def show_counter
