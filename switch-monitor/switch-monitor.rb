@@ -1,24 +1,24 @@
-class SwitchMonitor < Controller
-  periodic_timer_event :show_switches, 10
+class SwitchMonitor < Trema::Controller
+  timer_event :show_switches, interval: 10.sec
 
-  def start
+  def start(_args)
     @switches = []
   end
 
   def switch_ready( datapath_id )
-    @switches < datapath_id.to_hex
-    info "Switch #{ datapath_id.to_hex } is UP"
+    @switches << datapath_id.to_hex
+    logger.info "Switch #{ datapath_id.to_hex } is UP"
   end
 
   def switch_disconnected( datapath_id )
     @swtich -= [datapath_id.to_hex]
-    info "Switch #{ datapath_id.to_hex } is DOWN"
+    logger.info "Switch #{ datapath_id.to_hex } is DOWN"
   end
 
   private
 
   def show_switches
-    info "All switches = " + @switches.sort.join( ",")
+    logger.info "All switches = " + @switches.sort.join( ",")
   end
 
 end
