@@ -1,9 +1,9 @@
 require "counter"
 
-class TrafficMonitor < Controller
-  periodic_timer_event :show_counter, 10
+class TrafficMonitor < Trema::Controller
+  timer_event :show_counter, interval: 10.sec
 
-  def start
+  def start(_args)
     @fdb = { }
     @counter = Counter.new
   end
