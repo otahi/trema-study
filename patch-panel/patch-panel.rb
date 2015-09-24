@@ -1,5 +1,5 @@
-class PatchPanel < Controller
-  def start
+class PatchPanel < Trema::Controller
+  def start(_args)
     @patch = []
     File.open( "./patch-panel.conf" ).each_line do | each |
       if /~(\d+)\s+(\d+)$/=~ each
